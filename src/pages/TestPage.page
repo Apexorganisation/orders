@@ -1,0 +1,20 @@
+<apex:page >
+    <apex:sectionHeader title="Registration Details" subtitle="Student" />
+    <apex:form >
+        <apex:pageBlock >
+        <apex:pageBlockSection columns="2">
+        <apex:outputLabel value="Enter Name"/>
+        <apex:inputText /> 
+        <apex:outputLabel value="Password"/>
+        <apex:inputSecret /> 
+        <apex:outputLabel value="Address"/>
+        <apex:inputTextarea />
+        </apex:pageBlockSection>
+        </apex:pageBlock>
+        
+        <apex:commandButton value="submit" /> 
+        
+        
+    </apex:form>
+  Test Page
+</apex:page>

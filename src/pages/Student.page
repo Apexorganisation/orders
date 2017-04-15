@@ -1,0 +1,35 @@
+<apex:page standardController="Student__c" recordSetVar="student"
+tabstyle="Student__c" showHeader="false" sidebar="false">
+<apex:sectionHeader title="SWASAKTI" subTitle="Students Attendance
+System"/> <apex:form >
+<center>
+<apex:outputLabel >Course :</apex:outputLabel>
+<apex:selectList id="one" size="1">
+<apex:selectOption itemValue="Cloud Computing" itemLabel="Cloud
+Computing"/> <apex:selectOption itemValue="Core Java" itemLabel="Core
+Java"/> <apex:selectOption itemValue="Tailoring" itemLabel="Tailoring"/>
+<apex:selectOption itemValue="Oracle Financials" itemLabel="Oracle
+Financials"/> <apex:selectOption itemValue="Oracle ADF" itemLabel="Oracle
+ADF"/> <apex:selectOption itemValue="Oracle DBA" itemLabel="Oracle DBA"/>
+<apex:selectOption itemValue="Spoken English" itemLabel="Spoken English"/>
+<apex:selectOption itemValue="Communication Skills" itemLabel="Communication Skills"/>
+<apex:selectOption itemValue="Personality Development" itemLabel="Personality
+Development"/> <apex:selectOption itemValue="Yoga" itemLabel="Yoga"/>
+<apex:selectOption itemValue="Tally ERP" itemLabel="Tally
+ERP"/> </apex:selectList></center>
+<apex:pageBlock >
+<apex:pageBlockSection >
+<apex:pageBlockTable id="two" value="{!student}" var="a" columnsWidth="50px,50px"
+cellpadding="14" border="4">
+<apex:column value="{!a.Name}"/>
+<apex:column headerValue="Attandance">
+<apex:inputCheckbox value="{!a.Name}">
+<apex:actionSupport event="onClick" action="{!GetSelected}"
+rerender="Selected_PBS"/> </apex:inputCheckbox>
+</apex:column>
+    </apex:pageBlockTable>
+</apex:pageBlockSection>
+<center><apex:commandButton value="Save"/></center>
+</apex:pageBlock>
+</apex:form>
+</apex:page>
